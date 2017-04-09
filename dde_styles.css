@@ -1,0 +1,166 @@
+/* Base typography */
+
+body {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  line-height: 1.86;
+  margin: 0 auto;
+  /*margin: 2px;*/
+  max-width: 150em;
+  background: lightgrey;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
+  text-transform: uppercase;
+  /*font-weight: bold;*/
+}
+
+li {
+  list-style-type: square;
+}
+
+a {
+  color: orange;
+  text-decoration: none;
+}
+
+a:hover {
+  color: green;
+  text-decoration: underline;
+}
+
+/* Layout table styles */
+
+.main-content {
+  width: 1200px;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  border-spacing: 10px;
+}
+
+.main-content-cell {
+  vertical-align: top;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+  /*margin:2px;*/
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.2s ease-in-out;
+  border-radius: 25px;
+}
+.main-content-cell2 {
+  /*vertical-align: middle;*/
+  /*padding-left: 2px;*/
+  /*padding-right: 2px;*/
+  /*text-align: center;*/
+
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px;
+}
+.main-content-cell:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.main-content-cell-heading {
+  font-size: 36px;
+  text-align: center;
+  /*padding-top: 20px;*/
+}
+
+/* Styles for top cover */
+
+/*.fixed-bg {
+background-image: url("fondo.jpg");
+min-height: 500px;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;*/
+/*Scale the background image to  be as large as possible */
+/*background-size: cover;*/
+/*}*/
+.top-cover {
+  background: url("fondo.jpg")
+  no-repeat center bottom;
+  /*min-height: 500px;*/
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 470px;
+  border-radius: 50px;
+}
+
+.cover-content {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+}
+
+.cover-cell {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.cover-heading {
+  letter-spacing: -0.05em;
+  color: white;
+  font-size: 120px;
+}
+
+/* Miscellaneous styles */
+
+.profile-image {
+  height: 200px;
+  border: thick white solid;
+  /*padding-left: 40px;*/
+  border-radius: 20px;
+}
+
+.experience {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.photograph {
+  width: 250px;
+  margin: 20px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: rgb(240, 240, 240);
+}
+.colspan-12 {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+
+}
+.colspan-6 {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.colspan-4 {
+  width: 33.3%;
+  float: left;
+  box-sizing:border-box;
+  margin-top: 20px;
+}
+.colspan-3 {
+  width: 25%;
+  float: left;
+  box-sizing: border-box;
+}
+*{
+  /*border: thin grey solid;*/
+}
+.row{
+  clear:both;
+}

@@ -1,226 +1,29 @@
-# Friendbook
+# Friendbook with Grid
 
-In this project, we will create our very first HTML page; a profile of ourselves. In the end, we'll
-work our way up to something that looks like [this
-target](http://appdevspring17.github.io/friendbook/dde_with_table.html).
+In this project, we're going to switch from using a `<table>` for layout to a better system; a grid of `<div>`s that we'll `float` next to one another.
 
-## Structure with HTML
+## Setup
 
-### Raw Content
+ 1. Click the "Clone or download" button.
+ 1. Select "Download ZIP".
+ 1. Extract and open the entire folder in Atom.
+ 1. Open `with_table.html` in Chrome.
+ 1. This was my solution to the homework. Study it and think up questions. CSS style rules are located in `our_styles.css`.
+ 1. Follow along with the video linked from Canvas
+ 1. We will explore some more CSS, the following diagram of the HTML Box Model will be useful:
 
-We'll start by getting the raw content into the page, and ignore styling for now. Our first target
-is something that looks like [this target](http://appdevspring17.github.io/friendbook/dde_intermediate.html).
+ <img src="HTML_Box_Model.png" width="600">
 
- 1. Create your own page called `[first name]-[last-initial].html` (for example, I called mine `raghu-b.html`).
- 1. Type in your own content:
-   - Your name
-   - Where you're from
-   - Some of your app ideas
-   - Some of your prior experience (jobs, education), and your LinkedIn URL
-   - A favorite nearby haunt (coffee shop or restaurant or pub)
+## From table to grid
 
-### Add Semantic Markup
+We translate the basic `<table>` layout to one that uses the `<div>` block element.  The `<div>` element is simply a way to contain or encapsulate some html within a block for some common styling purpose.
 
- Next, let's tag our content to let the browser know what each thing is. Useful HTML elements include:
+ 1. Open up `with_grid.html`  
+ 1. Each `<table>` element has been translated to a `<div>` element as follows:
 
- - Headings: `<h1>`, `<h2>`, ... , `<h6>`
- - Paragraph: `<p>`
- - Unordered list: `<ul>`
- - Ordered list: `<ol>`
- - List item: `<li>`
- - Link: `<a href="http://www.addressofsomepage.com/whatever">`
 
-### Add Images
-
-Let's add some images to the page:
-
-- A profile photo (you can grab a fake one from [UIFaces](http://uifaces.com/authorized))
-- A cover photo (you can grab a stock one from [Stock Up](http://www.sitebuilderreport.com/stock-up))
-- A few of your photos (you can grab fakes ones from [Stock Up](http://www.sitebuilderreport.com/stock-up))
-
-After you download your images, name them similarly to what you called your HTML file:
-
- - `[first name]-[last-initial]-profile.jpg`
- - `[first name]-[last-initial]-cover.png`
- - `[first name]-[last-initial]-1.png`
- - `[first name]-[last-initial]-2.jpg`
- - `[first name]-[last-initial]-3.png`
- - `[first name]-[last-initial]-4.jpg`
-
-Then, add them into your document using the `img` tag:
-
-```html
-  /* An image located in the same folder as this document */
-  <img src="whatever.jpg">
-
-  /* An image located somewhere on the Internet */
-  <img src="http://somewhere.com/whatever.jpg">
-```
-
-### Tables
-
-Let's put your experience data into a table. In HTML, the `<table>` element is used to represent two dimensional data. A simple table looks like this:
-
-    <table>
-      <tr>
-        <th>First</th>
-        <th>Last</th>
-      </tr>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-      </tr>
-      <tr>
-        <td>Jane</td>
-        <td>Doe</td>
-      </tr>
-    </table>
-
-which would produce this:
-
-<table>
-  <tr>
-    <th>First</th>
-    <th>Last</th>
-  </tr>
-  <tr>
-    <td>John</td>
-    <td>Doe</td>
-  </tr>
-  <tr>
-    <td>Jane</td>
-    <td>Doe</td>
-  </tr>
-</table>
-
-The things to keep in mind about tables are:
-
- - Every piece of data must reside within a cell, a `<td>` element (or maybe a `<th>` element if it's a heading).
- - Every `<td>` or `<th>` element must reside within a row, a `<tr>` element.
- - Every `<tr>` must have the same number of cells, or things get out of whack.
-
-Despite this last rule, you can, however, "merge" cells using the `colspan` attribute:
-
-    <table>
-      <tr>
-        <th colspan="2">People</th>
-      </tr>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-      </tr>
-      <tr>
-        <td>Jane</td>
-        <td>Doe</td>
-      </tr>
-    </table>
-
-produces:
-
-<table>
-  <tr>
-    <th colspan="2">People</th>
-  </tr>
-  <tr>
-    <td>John</td>
-    <td>Doe</td>
-  </tr>
-  <tr>
-    <td>Jane</td>
-    <td>Doe</td>
-  </tr>
-</table>
-
-You can see that we've merged two cells in the first row together; the `colspan="2"` on the first cell ensures that we don't violate the "every `<tr>` must have the same number of cells" rule.
-
-**Your task:** Try to create a "What I've Done" section similar to [the one you see here](http://appdevspring16.github.io/friendbook/intermediate.html).
-
-### Embedding Objects
-
-- Add a Google Map of your favorite nearby haunt
-- Add a Vine that you like [(here are some examples to choose from)](https://vine.co/Zach.King?mode=list)
-- Add a YouTube video that you like [(here are some examples to choose from)](https://www.youtube.com/watch?v=nCKkHqlx9dE)
-
-## Styling with CSS
-
-Now that we have our content showing up, and we've added some basic structure with HTML, it's time to customize the styling of the page.
-
-The basic syntax of CSS looks like this:
-
-```html
-<h1 class="greeting">Hi there</h1>
-
-<style>
-  .greeting {
-    font-size: 24px;
-    color: darkgrey;
-  }
-</style>
-```
-
-The rest is just practice, and expanding our vocabulary of what CSS properties are available to us.
-
-Below are some resources that might be helpful as we go along:
-
- - [Google Web Fonts](https://www.google.com/fonts)
- - Google Web Font showcases: [Beautiful Web Type](http://hellohappy.org/beautiful-web-type) and [Typographic Project](http://femmebot.github.io/google-type/)
-
- - Hero unit with cover image:
-
-        .top-cover {
-          background: url("cover.jpg") no-repeat center bottom;
-          background-size: cover;
-          height: 300px;
-        }
-
- - [Material-Design](https://www.google.com/design/spec/material-design/introduction.html)-style box shadow:
-
-        .some-thing {
-          box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-          transition: all 0.2s ease-in-out;
-        }
-
-        .some-thing:hover {
-          box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-        }
-
- - [HTML5 Element List](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
-
- - An abbreviated list of other useful CSS properties and example values:
-
-        /* Typography */
-
-        color: orange;
-        font-family: 'Playfair Display', serif;
-        font-size: 18px;
-        font-weight: bold;
-        letter-spacing: 0.4em;
-        line-height: 1.86;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-
-        /* Box Model */
-
-        border-color: rgb(240, 240, 240);
-        border-style: solid;
-        border-width: 5px;
-        border: thick white solid;
-        height: 200px;
-        margin: auto;
-        padding-bottom: 20px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding: 20px;
-        width: 100%;
-
-        /* Table */
-
-        border-spacing: 10px;
-        vertical-align: top;
-
-         /* Other */
-
-        background-color: rgba(0, 0, 0, 0.5)
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-        list-style-type: square;
+ table element | grid element
+  ------------ | -------------
+  `<table>`    |   `<div class=“main-content”>`
+  `<tr>`         |       `<div class=“row”>`
+  `<td class="main-content-cell" colspan="6”> `   |   `<div class=" main-content-cell colspan-6">`
